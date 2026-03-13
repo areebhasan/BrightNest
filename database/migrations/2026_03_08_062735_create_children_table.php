@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('children', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('service_id')->constrained()->cascadeOnDelete();
+            $table->string('crn')->unique();
             $table->string('first_name');
             $table->string('last_name');
             $table->date('dob');
-            $table->string('room_name');
+            $table->string('room_name')->nullable();
             $table->string('status')->default('active');
             $table->timestamps();
         });
