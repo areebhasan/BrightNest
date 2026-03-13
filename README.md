@@ -1,12 +1,45 @@
 # BrightNest
 
-## Childcare Administration Platform
+![Laravel](https://img.shields.io/badge/Laravel-11-red)
+![Vue](https://img.shields.io/badge/Vue-3-green)
+![Tailwind](https://img.shields.io/badge/TailwindCSS-3-blue)
+![License](https://img.shields.io/badge/License-Educational-lightgrey)
 
-BrightNest is a modern childcare administration platform designed to streamline operational workflows in early learning centres. The system focuses on managing services, rooms, children, and enrolments while supporting operational automation such as age-based room allocation.
+### Childcare Administration Platform
 
-The application is built using Laravel, Vue, and Tailwind CSS, following a modern SaaS style interface.
+BrightNest is a modern childcare administration platform designed to streamline operational workflows in early learning centres.
 
-This project demonstrates full stack development across backend architecture, API design, and frontend component driven UI.
+The system focuses on managing services, rooms, children, and enrolments while supporting automation such as **age-based room allocation**.
+
+The platform is built using **Laravel, Vue 3, and Tailwind CSS** with a modern SaaS style interface.
+
+---
+
+## Application Screenshots
+
+### Dashboard
+
+![Dashboard Screenshot](docs/screenshots/dashboard.png)
+
+### Rooms Management
+
+![Rooms Screenshot](docs/screenshots/rooms.png)
+
+### Children Management
+
+![Children Screenshot](docs/screenshots/children.png)
+
+---
+
+## Key Features
+
+• Secure authentication using Laravel Breeze  
+• Multi-service workspace support  
+• Room management with age range configuration  
+• Children management with CRN and DOB  
+• Automatic room suggestion based on child age  
+• Vue component based SaaS UI  
+• Responsive Tailwind interface
 
 ---
 
