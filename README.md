@@ -2,69 +2,49 @@
 
 ![Laravel](https://img.shields.io/badge/Laravel-11-red)
 ![Vue](https://img.shields.io/badge/Vue-3-green)
-![Tailwind](https://img.shields.io/badge/TailwindCSS-3-blue)
-![License](https://img.shields.io/badge/License-Educational-lightgrey)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-blue)
+![License](https://img.shields.io/badge/License-Portfolio-lightgrey)
 
-### Childcare Administration Platform
+## Childcare Administration Platform
 
 BrightNest is a modern childcare administration platform designed to streamline operational workflows in early learning centres.
 
-The system focuses on managing services, rooms, children, and enrolments while supporting automation such as **age-based room allocation**.
+The system focuses on managing childcare services, rooms, children, and enrolments while supporting operational automation such as **age-based room allocation**.
 
-The platform is built using **Laravel, Vue 3, and Tailwind CSS** with a modern SaaS style interface.
+The platform is built using **Laravel, Vue 3, and Tailwind CSS** and follows a modern SaaS-style administrative interface.
+
+This project demonstrates full-stack development including backend architecture, API design, and component-based frontend UI.
 
 ---
 
-## Application Screenshots
+# Application Screenshots
 
 ### Dashboard
 
-![Dashboard Screenshot](docs/screenshots/dashboard.png)
+![Dashboard](docs/screenshots/dashboard.png)
 
 ### Rooms Management
 
-![Rooms Screenshot](docs/screenshots/rooms.png)
+![Rooms](docs/screenshots/rooms.png)
 
 ### Children Management
 
-![Children Screenshot](docs/screenshots/children.png)
+![Children](docs/screenshots/children.png)
 
 ---
 
-## Key Features
+# Key Features
 
-• Secure authentication using Laravel Breeze  
-• Multi-service workspace support  
-• Room management with age range configuration  
-• Children management with CRN and DOB  
-• Automatic room suggestion based on child age  
-• Vue component based SaaS UI  
-• Responsive Tailwind interface
+### Authentication
 
----
+Secure authentication using Laravel Breeze.
 
-## Project Overview
+Features include:
 
-BrightNest simulates real childcare management software used in early childhood education centres.
-
-The system supports multiple childcare services, each with its own operational workspace where administrators can manage rooms, children, and enrolments.
-
-The application also introduces automated logic to assist educators and administrators with operational decisions such as determining the most appropriate room for a child based on their age.
-
----
-
-## Core Features
-
-### Authentication System
-
-Secure user authentication using Laravel Breeze.
-
-Features include
-
-• Login and session management  
-• User profile management  
-• Secure logout  
+• Login and logout  
+• Session management  
 • Protected application routes  
+• User profile management  
 
 ---
 
@@ -72,31 +52,31 @@ Features include
 
 Users can manage multiple childcare services.
 
-After login, users select an **active service workspace**, and all operations are scoped to that service.
+After login, the user selects an **active service workspace** and all data operations are scoped to that service.
 
-This allows a single administrator to manage multiple centres.
+This allows a single administrator to manage multiple childcare centres.
 
-Features include
+Features include:
 
-• Active service selection  
-• Session based service context  
-• Isolated data per service  
+• Active service switching  
+• Session-based service context  
+• Data isolation between services  
 
 ---
 
 ### Room Management
 
-Administrators can create and manage childcare rooms within each service.
+Administrators can create and manage childcare rooms within a service.
 
-Each room contains age configuration to support automated child placement.
+Room configuration includes age ranges to support automated child placement.
 
-Room fields include
+Room fields:
 
 • Room name  
 • Age group description  
 • Minimum age in months  
 • Maximum age in months  
-• Status (active or inactive)
+• Status (active / inactive)
 
 ---
 
@@ -106,7 +86,7 @@ Children enrolled within a service can be created and managed.
 
 Child records include key enrolment information.
 
-Fields include
+Fields include:
 
 • CRN (Child Reference Number)  
 • First name  
@@ -116,100 +96,100 @@ Fields include
 
 ---
 
-### Automatic Age Based Room Suggestion
+### Automatic Age-Based Room Suggestion
 
-One of the core features of BrightNest is the automated room suggestion system.
+BrightNest includes logic to automatically suggest the appropriate room for a child.
 
-The application automatically:
+The system:
 
-1. Calculates the child's age in months using their date of birth  
-2. Compares the age against configured room age ranges  
-3. Suggests the most appropriate room for the child  
+1. Calculates the child’s age in months
+2. Compares it against configured room age ranges
+3. Suggests the most suitable room
 
-This replicates real operational workflows used in childcare centres when assigning children to rooms.
+This replicates real workflows used in childcare management systems.
 
 ---
 
-## Technology Stack
+# Technology Stack
 
 Backend  
-Laravel  
+Laravel
 
 Frontend  
-Vue 3  
+Vue 3
 
 Styling  
-Tailwind CSS  
+Tailwind CSS
 
 Interactivity  
-Alpine.js  
+Alpine.js
 
 Database  
-MySQL  
+MySQL
 
 Authentication  
-Laravel Breeze  
+Laravel Breeze
 
 ---
 
-## System Architecture
+# System Architecture
 
-BrightNest follows a modern full stack architecture.
+The application follows a modern full-stack architecture.
 
-Laravel handles
+Laravel handles:
 
 • Business logic  
-• API endpoints  
 • Database interactions  
+• API endpoints  
 • Authentication  
 
-Vue manages
+Vue manages:
 
-• Component driven UI  
+• Component-based UI  
 • Dynamic frontend rendering  
 
-Alpine.js is used for lightweight UI behaviour such as dropdowns and navigation interactions.
+Alpine.js provides lightweight UI behaviour such as dropdowns and navigation interactions.
 
 ---
 
-## Installation
+# Installation
 
 Follow the steps below to run the project locally.
 
-### 1. Clone the Repository
+## Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/brightnest.git
 cd brightnest
 ```
 
-### 2. Install Backend Dependencies
+## Install Backend Dependencies
 
 ```bash
 composer install
 ```
 
-### 3. Install Frontend Dependencies
+## Install Frontend Dependencies
 
 ```bash
 npm install
 ```
 
-### 4. Create Environment File
+## Create Environment File
 
 ```bash
 cp .env.example .env
 ```
 
-### 5. Generate Application Key
+## Generate Application Key
 
 ```bash
 php artisan key:generate
 ```
 
-### 6. Configure Database
+## Configure Database
 
-Open `.env` and update the database configuration.
+Open `.env` and update database configuration.
 
 Example:
 
@@ -222,27 +202,27 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### 7. Run Database Migrations
+## Run Database Migrations
 
 ```bash
 php artisan migrate
 ```
 
-### 8. Start Laravel Server
+## Start Laravel Server
 
 ```bash
 php artisan serve
 ```
 
-The application will run at:
+Application will run at:
 
 ```
 http://127.0.0.1:8000
 ```
 
-### 9. Start Frontend Development Server
+## Start Frontend Development Server
 
-In a separate terminal run:
+In another terminal:
 
 ```bash
 npm run dev
@@ -250,35 +230,21 @@ npm run dev
 
 ---
 
-## Running the Application
+# Current Modules
 
-After starting both servers:
-
-Open in your browser:
-
-```
-http://127.0.0.1:8000
-```
-
-Register a user account and begin creating services, rooms, and children.
-
----
-
-## Current Modules
-
-The platform currently includes the following modules:
+The platform currently includes:
 
 Authentication  
 Service workspace selection  
 Room management  
 Children management  
-Age based room suggestions  
+Age-based room suggestions  
 
 ---
 
-## Future Roadmap
+# Future Roadmap
 
-Planned features include
+Planned features include:
 
 Enrolments management  
 Attendance tracking  
@@ -290,20 +256,20 @@ Operational dashboards and analytics
 
 ---
 
-## Purpose of the Project
+# Purpose of the Project
 
-BrightNest was developed as a full stack portfolio project demonstrating:
+BrightNest was developed as a full-stack portfolio project demonstrating:
 
 • Laravel backend development  
 • API design  
 • Vue component architecture  
-• SaaS style interface design  
+• SaaS interface design  
 • Business workflow modelling  
 
 The project models real childcare operational workflows and can be extended into a full production platform.
 
 ---
 
-## License
+# License
 
 This project is provided for educational and portfolio purposes.
