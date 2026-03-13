@@ -1,59 +1,276 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# BrightNest
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Childcare Administration Platform
 
-## About Laravel
+BrightNest is a modern childcare administration platform designed to streamline operational workflows in early learning centres. The system focuses on managing services, rooms, children, and enrolments while supporting operational automation such as age-based room allocation.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The application is built using Laravel, Vue, and Tailwind CSS, following a modern SaaS style interface.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+This project demonstrates full stack development across backend architecture, API design, and frontend component driven UI.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## Project Overview
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+BrightNest simulates real childcare management software used in early childhood education centres.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+The system supports multiple childcare services, each with its own operational workspace where administrators can manage rooms, children, and enrolments.
 
-## Laravel Sponsors
+The application also introduces automated logic to assist educators and administrators with operational decisions such as determining the most appropriate room for a child based on their age.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## Core Features
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Authentication System
 
-## Contributing
+Secure user authentication using Laravel Breeze.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Features include
 
-## Code of Conduct
+• Login and session management  
+• User profile management  
+• Secure logout  
+• Protected application routes  
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+### Multi Service Workspace
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Users can manage multiple childcare services.
+
+After login, users select an **active service workspace**, and all operations are scoped to that service.
+
+This allows a single administrator to manage multiple centres.
+
+Features include
+
+• Active service selection  
+• Session based service context  
+• Isolated data per service  
+
+---
+
+### Room Management
+
+Administrators can create and manage childcare rooms within each service.
+
+Each room contains age configuration to support automated child placement.
+
+Room fields include
+
+• Room name  
+• Age group description  
+• Minimum age in months  
+• Maximum age in months  
+• Status (active or inactive)
+
+---
+
+### Children Management
+
+Children enrolled within a service can be created and managed.
+
+Child records include key enrolment information.
+
+Fields include
+
+• CRN (Child Reference Number)  
+• First name  
+• Last name  
+• Date of birth  
+• Status  
+
+---
+
+### Automatic Age Based Room Suggestion
+
+One of the core features of BrightNest is the automated room suggestion system.
+
+The application automatically:
+
+1. Calculates the child's age in months using their date of birth  
+2. Compares the age against configured room age ranges  
+3. Suggests the most appropriate room for the child  
+
+This replicates real operational workflows used in childcare centres when assigning children to rooms.
+
+---
+
+## Technology Stack
+
+Backend  
+Laravel  
+
+Frontend  
+Vue 3  
+
+Styling  
+Tailwind CSS  
+
+Interactivity  
+Alpine.js  
+
+Database  
+MySQL  
+
+Authentication  
+Laravel Breeze  
+
+---
+
+## System Architecture
+
+BrightNest follows a modern full stack architecture.
+
+Laravel handles
+
+• Business logic  
+• API endpoints  
+• Database interactions  
+• Authentication  
+
+Vue manages
+
+• Component driven UI  
+• Dynamic frontend rendering  
+
+Alpine.js is used for lightweight UI behaviour such as dropdowns and navigation interactions.
+
+---
+
+## Installation
+
+Follow the steps below to run the project locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/brightnest.git
+cd brightnest
+```
+
+### 2. Install Backend Dependencies
+
+```bash
+composer install
+```
+
+### 3. Install Frontend Dependencies
+
+```bash
+npm install
+```
+
+### 4. Create Environment File
+
+```bash
+cp .env.example .env
+```
+
+### 5. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 6. Configure Database
+
+Open `.env` and update the database configuration.
+
+Example:
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=brightnest
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 7. Run Database Migrations
+
+```bash
+php artisan migrate
+```
+
+### 8. Start Laravel Server
+
+```bash
+php artisan serve
+```
+
+The application will run at:
+
+```
+http://127.0.0.1:8000
+```
+
+### 9. Start Frontend Development Server
+
+In a separate terminal run:
+
+```bash
+npm run dev
+```
+
+---
+
+## Running the Application
+
+After starting both servers:
+
+Open in your browser:
+
+```
+http://127.0.0.1:8000
+```
+
+Register a user account and begin creating services, rooms, and children.
+
+---
+
+## Current Modules
+
+The platform currently includes the following modules:
+
+Authentication  
+Service workspace selection  
+Room management  
+Children management  
+Age based room suggestions  
+
+---
+
+## Future Roadmap
+
+Planned features include
+
+Enrolments management  
+Attendance tracking  
+Staff management  
+Child room transfers  
+Room capacity management  
+Compliance ratio monitoring  
+Operational dashboards and analytics  
+
+---
+
+## Purpose of the Project
+
+BrightNest was developed as a full stack portfolio project demonstrating:
+
+• Laravel backend development  
+• API design  
+• Vue component architecture  
+• SaaS style interface design  
+• Business workflow modelling  
+
+The project models real childcare operational workflows and can be extended into a full production platform.
+
+---
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is provided for educational and portfolio purposes.
