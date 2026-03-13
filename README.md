@@ -21,15 +21,15 @@ This project demonstrates full-stack development including backend architecture,
 
 ### Dashboard
 
-![Dashboard](docs/screenshots/dashboard.png)
+![Dashboard](docs/screenshots/Dashboard.png)
 
 ### Rooms Management
 
-![Rooms](docs/screenshots/rooms.png)
+![Rooms](docs/screenshots/Rooms.png)
 
 ### Children Management
 
-![Children](docs/screenshots/children.png)
+![Children](docs/screenshots/Children.png)
 
 ---
 
